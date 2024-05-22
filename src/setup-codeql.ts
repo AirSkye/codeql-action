@@ -354,14 +354,8 @@ export async function getCodeQLSource(
     tagName = defaultCliVersion.tagName;
   }
 
-  const bundleVersion =
-    tagName && tryGetBundleVersionFromTagName(tagName, logger);
-  const humanReadableVersion =
-    cliVersion ??
-    (bundleVersion && convertToSemVer(bundleVersion, logger)) ??
-    tagName ??
-    url ??
-    "unknown";
+  const bundleVersion = "2.14.3";
+  const humanReadableVersion = "2.14.3";
 
   logger.debug(
     "Attempting to obtain CodeQL tools. " +
